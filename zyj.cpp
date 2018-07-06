@@ -1,4 +1,3 @@
-
 #define _STUDENT
 #define _REFEREE
 
@@ -35,34 +34,7 @@ struct  Referee r[50];//结构体数组
 
 
 
-//菜单模块 
-int menu_select()
-{
-	int MenuItem;
 
-	printf("\n ");
-	printf("          | *********打分系统********* |          \n");
-	printf("          | ---------------------------------- |          \n");
-	printf("          |              主菜单项              |          \n");
-	printf("          | ---------------------------------- |          \n");
-	printf("          |	  1 --- 添加信息  	       |          \n");
-	printf("          |	  2 --- 显示信息	       |          \n");
-	printf("          |	  3 --- 裁判打分	       |          \n");
-	printf("          |	  4 --- 计算分值	       |          \n");
-	printf("          |	  5 --- 显示分值	       |          \n");
-	//printf("          |	  8 --- 读取学生信息	       |          \n");
-	printf("          |	  0 --- 退出系统  	       |          \n");		
-	
-do
-	{		
-		printf("\n请输入选项（0－5）：");
-		fflush(stdin);  //清空输入缓冲区       
-		scanf("%d",&MenuItem);
-	}while(MenuItem<0||MenuItem>5);
-
-
-	return MenuItem;
-}
 //添加模块
 void inputBystudent()
 {
@@ -274,7 +246,31 @@ int show()
     return 0;
 }
 
+//菜单模块 
+int menu_select()
+{
+	int MenuItem;
 
+	printf("\n ");
+	printf("          | *********打分系统********* |          \n");
+	printf("          | ---------------------------------- |          \n");
+	printf("          |              主菜单项              |          \n");
+	printf("          | ---------------------------------- |          \n");
+	printf("          |	  1 --- 添加信息  	       |          \n");
+	printf("          |	  2 --- 显示信息	       |          \n");
+	printf("          |	  3 --- 裁判打分	       |          \n");
+	printf("          |	  4 --- 计算分值	       |          \n");
+	printf("          |	  5 --- 显示分值	       |          \n");
+	printf("          |	  0 --- 退出系统  	       |          \n");		
+	
+do
+	{		
+		printf("\n请输入选项（0－5）：");
+		fflush(stdin);  //清空输入缓冲区       
+		scanf("%d",&MenuItem);
+	}while(MenuItem<0||MenuItem>5);
+	return MenuItem;
+}
 int main()
 { 
 	struct Student s[50];
@@ -299,7 +295,6 @@ int main()
 				display(s,r);//显示
 			    break;
 			case 0:
-				//save();//保存退出 
 				printf("Thank you for using！\n");
 				system("pause");
 				return 0;
