@@ -8,8 +8,6 @@
 #include <string.h>
 #include <iostream>
 
-//extern int amount;
-
 struct Teacher
 {
 	char name[10];
@@ -23,14 +21,22 @@ struct Student
 	char name[10];
 	char sex[5];
 	char showname[30];
-	char showtype[10];
+	char type[3];
+	char showtype[5];
 	char stuclass[10];
 	long num;
 	float grade;
 };
 struct Student s[100];
+struct Student sing[100];
+struct Student dance[100];
+extern int samount;
+extern int damount;
 extern int menu_select();
 extern void t_output();
 extern void s_output();
 extern void mark();
+extern void show();
+extern void ranking();
+extern void save();
 #endif
