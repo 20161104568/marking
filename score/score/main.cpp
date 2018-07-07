@@ -37,9 +37,9 @@ extern int menu_select()
 	printf("          | ------------------------------ |          \n");
 	printf("          |            主菜单项            |          \n");
 	printf("          | ------------------------------ |          \n");
-	printf("          |	  1 --- 选手信息       |          \n");
+	printf("          |	  1 --- 选手信息           |          \n");
 	printf("          |	  2 --- 裁判信息	   |          \n");
-	printf("          |	  3 --- 打分	       |          \n");
+	printf("          |	  3 --- 打分	           |          \n");
 	printf("          |	  4 --- 选手成绩	   |          \n");
 	printf("          |	  5 --- 选手排名	   |          \n");
 	printf("          |	  0 --- 退出系统  	   |          \n");
@@ -134,7 +134,7 @@ extern void output()
 {
 	int i;
 	printf("序号 姓名   性别  节目名称  类别   节目类别   班级    电话号码  平均成绩\n");
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 6; i++)
 	{
 		printf("%3d %6s %4s %9s %5s %9s %10s %9ld %8.2f\n", s[i].snum, s[i].name, s[i].sex, s[i].showname, &s[i].type, s[i].showtype, s[i].stuclass, s[i].num, s[i].grade);
 	}
